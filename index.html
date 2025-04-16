@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prompt and Confirm</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    window.onload = function () {
+      let name = prompt("Please enter your name:");
+      if (name !== null && name.trim() !== "") {
+        let confirmation = confirm(`Did you really enter: "${name}"?`);
+        if (confirmation) {
+          window.location.href = "yes.html";
+        } else {
+          window.location.href = "no.html";
+        }
+      } else {
+        alert("No name entered. Reload the page to try again.");
+      }
+    };
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Prompt Page</h1>
+  </header>
+  <main>
+    <p>This page will prompt you for your name and confirm your input.</p>
+  </main>
+  <footer>
+    <p>&copy; 2025 Jared Frost</p>
+  </footer>
+</body>
+</html>
